@@ -105,7 +105,7 @@ export class GuiModel {
                             "required": true
                         },
                         {
-                            "id": "appVersion",
+                            "id": "changeSet",
                             "type": "text",
                             "name": "Changeset",
                             "required": true
