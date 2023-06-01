@@ -87,6 +87,35 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "ErweiterungModul",
+                    "title": "Erweiterung Applikation",
+                    "url": "/extensionapp",
+                    "formFieldList": [
+                        {
+                            "id": "appName",
+                            "type": "text",
+                            "name": "Applikation",
+                            "required": true
+                        },
+                        {
+                            "id": "appVersion",
+                            "type": "text",
+                            "name": "Version",
+                            "required": true
+                        },
+                        {
+                            "id": "appVersion",
+                            "type": "text",
+                            "name": "Changeset",
+                            "required": true
+                        },
+                        {
+                            "type": "addButton",
+                            "name": "Erfassen"
+                        }
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -106,6 +135,16 @@ export class GuiModel {
                             "page": "toDoPage",
                             "width": 2,
                             "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Neues App Version"},
+                            "icon": "fa-plus",
+                            "color": "yellow",
+                            "width": 2,
+                            "form" : {
+                                "form" : "ErweiterungModul"
+                            }
                         },
                     ]
                 },
@@ -135,7 +174,8 @@ export class GuiModel {
                             "form": {
                                 "form": "ToDoForm"
                             }
-                        }
+                        },
+                       
                     ]
                 },
             ]
