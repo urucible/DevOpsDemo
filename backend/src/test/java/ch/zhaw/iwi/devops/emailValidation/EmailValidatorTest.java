@@ -32,6 +32,7 @@ public class EmailValidatorTest {
         String email = "@test.com";
         Assertions.assertFalse(validator.validateEmail(email));
     }
+    
     @Test
     public void emailValidatorTestFive(){
         EmailValidator validator = new EmailValidator();
@@ -45,12 +46,14 @@ public class EmailValidatorTest {
         String email = "testmail.com";
         Assertions.assertFalse(validator.validateEmail(email));
     }
+
     @Test
     public void emailValidatorTestSeven(){
         EmailValidator validator = new EmailValidator();
         String email = "test@mail.ch.com";
         Assertions.assertTrue(validator.validateEmail(email));
     }
+
     @Test
     public void emailValidatorTestEight(){
         EmailValidator validator = new EmailValidator();
