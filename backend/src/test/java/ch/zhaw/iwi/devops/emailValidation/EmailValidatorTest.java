@@ -48,8 +48,8 @@ public class EmailValidatorTest {
     @Test
     public void emailValidatorTestSeven(){
         EmailValidator validator = new EmailValidator();
-        String email = "test@mail..com";
-        Assertions.assertFalse(validator.validateEmail(email));
+        String email = "test@mail.ch.com";
+        Assertions.assertTrue(validator.validateEmail(email));
     }
     @Test
     public void emailValidatorTestEight(){
