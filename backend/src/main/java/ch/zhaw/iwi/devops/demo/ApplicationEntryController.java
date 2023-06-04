@@ -37,20 +37,20 @@ public class ApplicationEntryController {
     }
 
     @PostMapping("/application")
-    public void createTodo(@RequestBody ApplicationEntry applicationEntry) {
+    public void createApplication(@RequestBody ApplicationEntry applicationEntry) {
         var newId = this.applicationEntries.keySet().stream().max(Comparator.naturalOrder()).orElse(0) + 1;
         applicationEntry.setId(newId);
         this.applicationEntries.put(newId, applicationEntry);
     }
 
     @PutMapping("/application/{appId}")
-    public void createTodo(@PathVariable Integer appId, @RequestBody ApplicationEntry applicationEntry) {
+    public void createApplication(@PathVariable Integer appId, @RequestBody ApplicationEntry applicationEntry) {
         applicationEntry.setId(appId);
         this.applicationEntries.put(appId, applicationEntry);
     }
 
     @DeleteMapping("/application/{appId}")
-    public ApplicationEntry deleteTodo(@PathVariable Integer appId) {
+    public ApplicationEntry deleteApplication(@PathVariable Integer appId) {
         return this.applicationEntries.remove(appId);
     }
 
